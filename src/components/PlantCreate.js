@@ -37,6 +37,10 @@ const PlantCreate = ({ user, msgAlert }) => {
 
     return (
 			<>
+            <form>
+
+                
+            </form>
 				<input
 					type='text'
 					value={plant.name}
@@ -49,6 +53,12 @@ const PlantCreate = ({ user, msgAlert }) => {
 					name='type'
 					onChange={handleChange}
 				/>
+                {/* <input
+					type='checkbox'
+					value={plant.edible}
+					name='type'
+					onChange={handleChange}
+				/> */}
 				<button onClick={handleCreatePlant}>Create Plant</button>
 			</>
 		)

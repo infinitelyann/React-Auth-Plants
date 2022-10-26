@@ -13,14 +13,19 @@ const authenticatedOptions = (
 				Change Password
 			</Link>
 		</Nav.Item>
-		<Nav.Item>
+		<Nav.Item> 
 			<Link to='sign-out' style={linkStyle}>
 				Sign Out
 			</Link>
 		</Nav.Item>
 		<Nav.Item>
-			<Link to='plants' style={linkStyle}>
+			<Link to='create' style={linkStyle}>
 				Create a Plant
+			</Link>
+		</Nav.Item>
+		<Nav.Item>
+			<Link to='plants' style={linkStyle}>
+				All Plants
 			</Link>
 		</Nav.Item>
 	</>

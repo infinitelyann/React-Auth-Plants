@@ -13,6 +13,8 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import PlantCreate from './components/PlantCreate'
+import PlantIndex from './components/PlantIndex'
+import PlantShow from './components/PlantShow'
 
 const App = () => {
 
@@ -70,12 +72,27 @@ const App = () => {
               </RequireAuth>}
           />
 		  <Route
-            path='/plants'
+            path='/create'
             element={
               <RequireAuth user={user}>
                 <PlantCreate msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
+		  <Route
+            path='/plants/:id'
+            element={
+              <RequireAuth user={user}>
+                <PlantShow msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+		    <Route
+            path='/plants'
+            element={
+              <RequireAuth user={user}>
+                <PlantIndex msgAlert={msgAlert} user={user} />
+              </RequireAuth>}
+          />
+
 				</Routes>
 				{msgAlerts.map((msgAlert) => (
 					<AutoDismissAlert
