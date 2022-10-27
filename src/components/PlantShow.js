@@ -27,7 +27,7 @@ const PlantShow = ({ user, msgAlert}) => {
                 variant: 'danger'
             })
         })
-    },[])
+    },[ user, msgAlert, id])
 
 
     const toggleShowUpdate = () => {
@@ -83,14 +83,14 @@ const PlantShow = ({ user, msgAlert}) => {
         <>
             <h3>Name: {plant.name}</h3>
             <p>Type: {plant.type}</p>
-            <button onClick={toggleShowUpdate}>Update</button>
+            <button className="btn btn-outline-dark"  onClick={toggleShowUpdate}>Update</button>
             {isUpdateShown && (
                 <PlantUpdate plant={plant}
                     handleChange={handleChange}
                     handleUpdatePlant={handleUpdatePlant}
                 />
             )}
-            <button onClick={handleDeletePlant}>Delete</button>
+            <button className="btn btn-outline-dark" onClick={handleDeletePlant}>Delete</button>
         </>
     )
 }

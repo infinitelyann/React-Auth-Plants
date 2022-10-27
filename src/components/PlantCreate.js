@@ -22,9 +22,10 @@ const PlantCreate = ({ user, msgAlert }) => {
         .then(() => {
             msgAlert({
                 heading: 'Success',
-                message: 'Create Plant',
+                message: 'View in All Plants',
                 variant: 'success'
             })
+            
         })
         .catch((error) => {
             msgAlert({
@@ -37,29 +38,49 @@ const PlantCreate = ({ user, msgAlert }) => {
 
     return (
 			<>
-            <form>
-
-                
-            </form>
-				<input
-					type='text'
-					value={plant.name}
-					name='name'
-					onChange={handleChange}
-				/>
-				<input
-					type='text'
-					value={plant.type}
-					name='type'
-					onChange={handleChange}
-				/>
-                {/* <input
+            <form style={{ padding: 50 }}>
+                <div>
+                    <h5>Whats the Name of your plant?</h5>
+                    <input
+                        type='text'
+                        value={plant.name}
+                        name='name'
+                        onChange={handleChange}
+                    />
+                </div>
+               
+               <div>
+                <h5>What color is your plant?</h5>
+                    <input
+                        type='color'
+                        value={plant.color}
+                        name='color'
+                        onChange={handleChange}
+                    />
+               </div>
+               <div>
+                <h5>What Type of plant?</h5>
+                    <p style={{ opacity: .5 }}>veggie? herb? flower?</p>
+                    <input
+                        type='text'
+                        value={plant.type}
+                        name='type'
+                        onChange={handleChange}
+                    />
+               </div>
+             
+                 {/* <h5>Is your plant edible?</h5>
+                <input
 					type='checkbox'
 					value={plant.edible}
-					name='type'
+					name='edible'
 					onChange={handleChange}
 				/> */}
-				<button onClick={handleCreatePlant}>Create Plant</button>
+              
+                <hr/>
+                </form>
+				<button onClick={handleCreatePlant} className="btn btn-outline-dark" style={{ margin: 50 }}>Create Plant</button>
+                
 			</>
 		)
 }

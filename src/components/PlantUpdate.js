@@ -15,7 +15,7 @@ const PlantUpdate = ({ plant, handleChange, handleUpdatePlant }) => {
             name='type' 
             onChange={handleChange} 
             />
-			<button onClick={handleUpdatePlant}>Update Plant</button>
+			<button className="btn btn-outline-dark" onClick={handleUpdatePlant}>Update Plant</button>
 		</>
 	)
 }

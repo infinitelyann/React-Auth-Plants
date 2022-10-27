@@ -5,6 +5,8 @@ import { plantIndex } from '../api/plant'
 const PlantIndex = ({ user, msgAlert }) => {
 
     const [allPlants, setAllPlants] = useState([])
+    // const [edible, setEdible] = useState(false)
+
 
     useEffect(() => {
         plantIndex(user)
@@ -23,12 +25,15 @@ const PlantIndex = ({ user, msgAlert }) => {
     const allPlantsJSX = allPlants.map(plant => {
         return (
 
-            <Link to={plant._id} key={plant._id} style={{ textDecoration: 'none' }}>
-                <div className='card'>
+            <Link to={plant._id} key={plant._id} style={{ textDecoration: 'none', color: 'black'}}>
+                <div className='card' style={{ backgroundColor: plant.color }}>
                 <div className='card-body'>
                     <h3 className='card-title'>{plant.name}</h3>
+                    {/* <p>{plant.edible}</p> */}
                      <p> {plant.type} </p> 
+
                      </div>
+
                 </div>
           
             </Link>
