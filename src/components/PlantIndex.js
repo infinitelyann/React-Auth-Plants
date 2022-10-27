@@ -22,8 +22,15 @@ const PlantIndex = ({ user, msgAlert }) => {
 
     const allPlantsJSX = allPlants.map(plant => {
         return (
-            <Link to={plant._id} key={plant._id}>
-            <li>Name: {plant.name} type: {plant.type}</li>
+
+            <Link to={plant._id} key={plant._id} style={{ textDecoration: 'none' }}>
+                <div className='card'>
+                <div className='card-body'>
+                    <h3 className='card-title'>{plant.name}</h3>
+                     <p> {plant.type} </p> 
+                     </div>
+                </div>
+          
             </Link>
         )
     })
