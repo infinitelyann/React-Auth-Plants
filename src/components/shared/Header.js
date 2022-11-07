@@ -8,22 +8,22 @@ const linkStyle = {
 }
 const authenticatedOptions = (
 	<>
-		<Nav.Item>
+		<Nav.Item className='m-2'>
 			<Link to='change-password' style={linkStyle}>
 				Change Password
 			</Link>
-		</Nav.Item>
-		<Nav.Item> 
+		</Nav.Item >
+		<Nav.Item className='m-2'> 
 			<Link to='sign-out' style={linkStyle}>
 				Sign Out
 			</Link>
 		</Nav.Item>
-		<Nav.Item>
+		<Nav.Item className='m-2'>
 			<Link to='create' style={linkStyle}>
 				Create a Plant
 			</Link>
 		</Nav.Item>
-		<Nav.Item>
+		<Nav.Item className='m-2'>
 			<Link to='plants' style={linkStyle}>
 				All Plants
 			</Link>
@@ -33,10 +33,10 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
 	<>
-        <Nav.Item>
+        <Nav.Item className='m-2'>
 		    <Link className="sign" to='sign-up' style={linkStyle}>Sign Up</Link>
         </Nav.Item>
-        <Nav.Item>
+        <Nav.Item className='m-2'>
 		    <Link className="sign" to='sign-in' style={linkStyle}>Sign In</Link>
         </Nav.Item>
 	</>
@@ -44,7 +44,7 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
 	<>
-		<Nav.Link>
+		<Nav.Link className='m-2'>
 			<Link to='plants' style={linkStyle}>
 				Home
 			</Link>
@@ -54,7 +54,7 @@ const alwaysOptions = (
 
 const Header = ({ user }) => (
 	<Navbar bg="dark"variant='dark' expand='md'>
-		<Navbar.Brand>
+		<Navbar.Brand className='m-2'>
             <Link to='plants' style={linkStyle}>
                 plants
             </Link>

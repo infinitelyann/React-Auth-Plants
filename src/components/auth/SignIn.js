@@ -55,8 +55,11 @@ const SignIn = (props) => {
 	}
 
     return (
+        <>
+        <style>{'body{background-image: url(https://i.imgur.com/ScMjDxj.jpg); background-size: cover}'}</style>
         <div className='row'>
             <div className='col-sm-10 col-md-8 mx-auto mt-5'>
+                <div className='container-md' style={{ backgroundColor: "#43295b", color: 'white', padding:"50px"}}>
                 <h3>Sign In</h3>
                 <Form onSubmit={onSignIn}>
                     <Form.Group controlId='email'>
@@ -81,12 +84,15 @@ const SignIn = (props) => {
                             onChange={e => setPassword(e.target.value)}
                         />
                     </Form.Group>
-                    <Button variant='primary' type='submit'>
+                    <Button style={{marginTop:"20px"}} variant='outline-light' type='submit'>
                         Submit
                     </Button>
                 </Form>
+
+                </div>
             </div>
         </div>
+        </>
     )
 }
 

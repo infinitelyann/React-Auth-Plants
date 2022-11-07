@@ -1,5 +1,7 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
+// import { Card } from 'react-bootstrap'
+
 
 
 const Home = (props) => {
@@ -12,8 +14,24 @@ const Home = (props) => {
 
 	return (
 		<>
-			<h2>Welcome to the Garden!</h2>
-			<p>Please sign up or login to see all the plants</p>
+		<style>{'body{background-image: url(https://i.imgur.com/ScMjDxj.jpg); background-size: cover}'}</style>
+		
+		<div className='container-sm' >
+			<div className='welcome'>
+			<h1>
+			Welcome to the Garden!
+			</h1>
+			<h4>
+			Please sign up or login to see all the plants
+
+			</h4>
+				
+		
+			</div>
+
+		</div>	
+			
+	
 		</>
 	)
 }
